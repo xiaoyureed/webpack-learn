@@ -33,6 +33,7 @@ module.exports = {
         new webpack.NamedModulesPlugin(),// 方便的查看module的依赖关系, HMR用
         new webpack.HotModuleReplacementPlugin() // 支持hmr
     ],
+    // mode: "development", // 设定为开发模式(代码不会压缩), 还有 production模式(压缩代码), 命令行指定: --mode xxx
     devtool: 'inline-source-map',// 追溯错误源文件, 仅需要这一行配置
     devServer: {
         contentBase: './dist',// 命令行指定 --content-base dist
