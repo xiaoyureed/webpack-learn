@@ -15,6 +15,16 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/' // 表示 express将会启动在 http://localhost:3000, 在 server.js中指定
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [// 更多 loader: https://webpack.js.org/guides/hot-module-replacement/#other-code-and-frameworks
+                    'style-loader', 'css-loader'
+                ]
+            }
+        ]
+    },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
