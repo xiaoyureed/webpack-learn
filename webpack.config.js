@@ -19,5 +19,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'output manage'// 指定index.html的title
         })
-    ]
+    ],
+    devtool: 'inline-source-map'// 追溯错误源文件, 仅需要这一行配置
 };
