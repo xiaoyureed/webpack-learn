@@ -12,7 +12,8 @@ module.exports = {
         // filename: 'main.js',
         // [name]表示entry中的key
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/' // 表示 express将会启动在 http://localhost:3000, 在 server.js中指定
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
