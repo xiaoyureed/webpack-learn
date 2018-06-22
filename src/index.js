@@ -13,6 +13,20 @@ function component() {
     element.appendChild(btn);
     
     return element;
-  }
+}
   
-document.body.appendChild(component());
+// document.body.appendChild(component());
+let element = component(); // 给下面的 hmr代码用
+document.body.appendChild(element);
+
+// HMR代码
+if (module.hot) {
+  // accept('moduleId', callback), 这里仅仅针对print.js热替换, 如果是accept(), 全体热替换
+  module.hot.accept('./print.js', function() {
+    console.log('探测到 printSth 的更新.');
+    // printSth();
+    document.body.removeChild(element);
+    element = component();//点击时, 重新渲染 component
+    document.body.appendChild(element);
+  });
+}
