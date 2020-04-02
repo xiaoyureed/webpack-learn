@@ -1,5 +1,7 @@
 // webpack-dev-middleware 用, 实际将编译后的文件放到server, 借助express提供web访问
-// 相比 webapck-dev-server 有更多的自定义配置, 更大的自由 , 区别: https://www.cnblogs.com/wangpenghui522/p/6826182.html
+// 相比 webpack-dev-server 有更多的自定义配置, 更大的自由 , 
+//区别: https://www.cnblogs.com/wangpenghui522/p/6826182.html
+//webpack-dev-server 等价于 一个express的Http服务器+调用webpack-dev-middleware
 
 const express = require('express');
 const webpack = require('webpack');

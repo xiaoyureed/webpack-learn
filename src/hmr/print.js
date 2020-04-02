@@ -1,8 +1,8 @@
 function printSth() {
-    //console.log('从print.js调用');
-    // consoles.log('I get called from print.js!');
-    console.log('====================================');
-    console.log('print.js 更新了');
-    console.log('====================================');
+    console.log('从print.js调用');
+    console.log('append log hello');
+    
 }
-export default printSth; // {printSth};// export & export default区别: https://stackoverflow.com/questions/35541864/es6-export-default-function
+// {printSth};
+// export & export default区别: https://stackoverflow.com/questions/35541864/es6-export-default-function
+export default printSth; 
